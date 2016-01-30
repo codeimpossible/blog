@@ -1,5 +1,5 @@
 ---
-title: hello world
+title: hello world (again)
 date: 2016-01-29 21:14:46
 tags:
 ---
@@ -10,7 +10,12 @@ I decided to start 2016 off a bit differently. Normally I'd write a recap post f
 
 Right. So, new year, new way of doing things. First, the blog. It hasn't gotten any love in pretty much a year, so I'm here kicking the dust off of it, fighting away all of the spiders and rodents that have nested in the past 12 months. New platform, it's running on [hexo](https://hexo.io/) a static site generator that runs on node.
 
-I got tired of dealing with the hassle of my jekyll powered blog, sure it ran, but everytime I wanted to go back to it I had to remember to install ruby, python, jekyll, pygments and I hadn't used any of those in a super long time. So just getting my blog viewable on my laptop was a nightmare, never mind trying to get it to run on my desktop (which is windows based). Forget it.
+Why Node? Well, I got tired of dealing with the hassle of my jekyll powered blog, sure it ran, but everytime I wanted to go back to it I had to remember to install ruby, python, jekyll, pygments and I hadn't used any of those in a super long time. So just getting my blog viewable on my laptop was a nightmare, never mind trying to get it to run on my desktop (which is windows based). Forget it.
+
+As part of the transition, I decided to not port a lot of my older posts. This is mostly just because I'm too lazy to grind through the changes necessary to get the posts to work with the new blog platform. I moved over 2 of my most popular posts, if you're looking for other posts, check out the [git repo](https://github.com/codeimpossible/blog/tree/master/_archive).
+
+If you're suuuuper interested in having me move a post over for whatever reason then open an issue on github and I'll do it.
+
 
 So, new blog. What else?
 
