@@ -4,6 +4,11 @@ status: publish
 title: "Trailing whitespace is evil. Don't commit evil into your repo."
 slug: "Trailing-whitespace-is-evil-Don-t-commit-evil-into-your-repo-"
 date: 2012/04/02 00:00:00
+categories:
+- development
+tags:
+- source-control
+- best-practices
 ---
 
 ### Lately, I've beeen working on a lot of projects with different people/languages/editors, most of us were new git'ers and each project had a real problem with trailing whitespace.

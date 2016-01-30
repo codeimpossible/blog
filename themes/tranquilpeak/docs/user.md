@@ -1,6 +1,6 @@
 # User documentation #
 
-A gorgeous responsive theme for Hexo blog framework 
+A gorgeous responsive theme for Hexo blog framework
 
 ![Tranquilpeak](http://d1u9biwaxjngwg.cloudfront.net/showcases/showcase-v1.6.jpg)
 
@@ -66,8 +66,8 @@ If you want to report a bug or ask a question, [create an issue](https://github.
 - Beautiful about page  
 - Support Open Graph protocol  
 - Support internationalization (i18n)
-  
-  
+
+
 **Posts features :**  
 - Thumbnail image  
 - Cover image  
@@ -78,8 +78,8 @@ If you want to report a bug or ask a question, [create an issue](https://github.
 - Image gallery  
 - Image generator helpers
 - Table of contents  
-  
-  
+
+
 **Integrated services :**  
 - Disqus  
 - Duoshuo  
@@ -103,7 +103,7 @@ If you want to report a bug or ask a question, [create an issue](https://github.
 ## Hexo configuration ##
 
 Modify the theme in `_config.yml` by changing `theme` variable  to `tranquilpeak`
-  
+
 If it's your first time using Hexo, please check [Hexo official documentation](https://hexo.io/docs/)
 
 ### Enable post assets folder ###
@@ -148,7 +148,7 @@ keywords:
 
 If you are new to Hexo and internationalization (i18n), please read [Hexo documentation - internationalization (i18n) section](https://hexo.io/docs/internationalization.html)
 
-Currently, the theme is delivered with english (en), chinese (zh-cn), french (fr-FR) and portuguese (pt-br) language file. 
+Currently, the theme is delivered with english (en), chinese (zh-cn), french (fr-FR) and portuguese (pt-br) language file.
 If your language is not available, follow this guidelines (E.g : add russian language (ru) :  
 1. Set `language` to `ru` in Hexo configuration file `_config.yml`  
 2. Create `ru.yml` file in `theme/tranquilpeak/languages/` folder  
@@ -171,7 +171,7 @@ The sidebar is powerful and easily configurable.
 DON'T modify variables name `sidebar`, `title`, `url` and `icon`.  
 Others variables name which refer to the name of a menu or a link can be edited. Example : `menu`, `home`, `categories`, etc...  
 You can add groups of links and links much as you want  
-You just have to respect the indentation : `groups of links` -> `link` -> `title`, `link`, `icon` 
+You just have to respect the indentation : `groups of links` -> `link` -> `title`, `link`, `icon`
 
 ``` yaml
 sidebar:
@@ -197,7 +197,7 @@ sidebar:
             url: /#search
             icon: search
             # `st-search-show-outputs` classes are used to open swiftype search window
-            class: t-search-show-outputs
+            class: st-search-show-outputs
         about:
             title: About me
             url: /#about
@@ -271,9 +271,9 @@ author:
     twitter:
     google_plus:
 ```
-  
+
 **Your biography and your job is editable in each languages files in `languages` folder**
-  
+
 - **email** : Your mail address. This address will be used to get your gravatar image if you activate gravatar option
 - **location** : Your location
 - **picture** : Your profile picture. Overwritten by your gravatar image if gravatar email is filled
@@ -304,7 +304,7 @@ tag_pagination: true
    * 4: Display header bar on all screens and medium sidebar is swiped when open button is clicked)
 - **clear_reading** : Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. Useless if `sidebar_behavior` is equal to `3` or `4`. (true: enable, false: disable). Default behavior : `theme.clear_reading` value in theme configuration file.
 - **toc_title** : Head title displayed at the top of the table of contents.
-- **thumbnail_image** : Display thumbnail image of each post on index pages 
+- **thumbnail_image** : Display thumbnail image of each post on index pages
 - **thumbnail_image_position** : Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`). Set this value to `right` if you have old posts to keep the old style on them and define `thumbnailImagePosition` on a post to overwrite this setting. (Default : `right`)
 - **auto_thumbnail_image** : Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image. Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image and set `autoThumbnailImage` to `false` on a post to overwrite this setting. (Default : `true`)
 - **read_more_message** : Message displayed after the `<!-- more -->` comment or after 300 characters in post
@@ -331,7 +331,7 @@ The same page with `category_pagination: false`:
 # Integrated services
 disqus_shortname:
 duoshuo_shortname:
-gravatar_email: 
+gravatar_email:
 google_analytics_id:  
 swiftype_install_key:
 fb_admin_ids:
@@ -347,7 +347,7 @@ fb_app_id:
 
 ### Enable pages ###
 
-Tranquilpeak provides you 3 pages to display all posts title and date by tags, by categories, by date and an about page. To enable one of this pages, 
+Tranquilpeak provides you 3 pages to display all posts title and date by tags, by categories, by date and an about page. To enable one of this pages,
 read following step.
 
 #### Enable all-categories page ####
@@ -355,7 +355,7 @@ read following step.
 To enable `all-categories` page :  
 1. Run `hexo new page "all-categories"`. A new folder named `all-categories` will be created in `source/`  
 2. Replace `source/all-categories/index.md` content with :
- 
+
 ``` markdown
 ---
 title: "all-categories"
@@ -371,7 +371,7 @@ New page will be reach at : `/all-categories`. On this page, users will be able 
 To enable `all-tags` page :  
 1. Run `hexo new page "all-tags"`. A new folder named `all-tags` will be created in `source/`  
 2. Replace `source/all-tags/index.md` content with :
- 
+
 ``` markdown
 ---
 title: "all-tags"
@@ -387,7 +387,7 @@ New page will be reach at : `/all-tags`. On this page, users will be able to sea
 To enable `all-archives` page :  
 1. Run `hexo new page "all-archives"`. A new folder named `all-archives` will be created in `source/`  
 2. Replace `source/all-archives/index.md` content with :
- 
+
 ``` markdown
 ---
 title: "all-archives"
@@ -409,9 +409,9 @@ On this page, users will be able to search and filter posts.
 While you are writing articles, you need to check the result a lot of times before deploying your site.
 If you have enable Google analytics service, Google will include all requests done, even when hostname is localhost and this can greatly skew the results.
 To overcome this, you have to add a filter on Google Analytics website.
-   
+
 Follow these steps, to add new filter :   
-1. Sign in to your Google Analytics account 
+1. Sign in to your Google Analytics account
 2. Select the **Admin** tab and navigate to the **property** in which you want to create the filter **(Account > Property > View)**  
 3. In **View** column, click on **Filters** button  
 4. Click on **+ NEW FILTER** button  
@@ -430,7 +430,7 @@ To use tags plugins to highlight code or add Fancybox image, please read [Hexo d
 ### Front-matter settings ###
 
 Tranquilpeak introduces new variables to give you a lot of possibilities.  
-  
+
 Example :  
 ``` markdown
 disqusIdentifier: fdsF34ff34
@@ -461,13 +461,13 @@ comments: false
 - **thumbnailImage** : Image displayed in index view.
 - **thumbnailImagePosition** : Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`). `thumbnailImagePosition` overwrite the setting `thumbnail_image_position` in the theme configuration file
 
-Example: 
+Example:
 A post on index page will look like this with :`thumbnailImagePosition` set to `bottom`:  
 ![thumbnail-image-position-bottom](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/TIP-bottom-400.jpg)  
-  
+
 The same with : `thumbnailImagePosition` set to `right`:  
 ![thumbnail-image-position-right](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/TIP-right-400.png)  
-  
+
 The same with : `thumbnailImagePosition` set to `left`:  
 ![thumbnail-image-position-left](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/TIP-left-400.png)  
 
@@ -484,7 +484,7 @@ Of course, you can set external url.**
 
 ### Define post excerpt ###
 
-Tranquilpeak v1.4.0 introduce a new way to define post excerpt with `<!-- excerpt -->` comment. Use 
+Tranquilpeak v1.4.0 introduce a new way to define post excerpt with `<!-- excerpt -->` comment. Use
 - `<!-- more -->` to define post excerpt and keep the post excerpt in the post content
 - `<!-- excerpt -->` to define post excerpt and remove the post excerpt of the post content
 
@@ -495,14 +495,14 @@ Tranquilpeak v1.4.0 introduce a new way to define post excerpt with `<!-- excerp
 ### Display table of contents ###
 
 As post excerpt feature enable with `<!-- more -->` comment, you can display the table of contents of a post with  `<!-- toc -->`.  Place this comment where you want to display the table of content. You can also edit the title displayed at the top of the table of contents in the `_config.yml` file
-  
+
 Here is what looks like the table of contents generated:  
-![thumbnail-image-position-left](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/toc-400.png) 
-  
+![thumbnail-image-position-left](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/toc-400.png)
+
 ### Tags ###
 
 Tranquilpeak introduce new tags to display alert messages, images in full width and create beautiful galleries.
-**DON'T use anymore fancybox tag**. Please use `image` tag with `fancybox` class to generate them. More information here : [Image tag](#image) 
+**DON'T use anymore fancybox tag**. Please use `image` tag with `fancybox` class to generate them. More information here : [Image tag](#image)
 
 #### Alert ###
 
@@ -517,7 +517,7 @@ content
 {% endalert %}
 ```
 
-E.g : 
+E.g :
 ```
 {% alert danger no-icon %}
 Here is a danger alert without icon
@@ -539,10 +539,10 @@ Highlight text tag is useful to highlight an interesting part in a text. Check i
 
 Syntax :  
 ```
-{% hl_text [(classes | hexa code | rgb color | rgba color)] %} 
+{% hl_text [(classes | hexa code | rgb color | rgba color)] %}
 content
 {% endhl_text %}
-``` 
+```
 
 E.g :  
 ```
@@ -563,14 +563,14 @@ your highlighted text
         - success  
         - warning  
         - danger  
-        
+
 **You can also use hexa color, rgb color, rgba color.**
 
-**It's important to put the paragraph that contains highlight text tag inside** `<p>...</p>` 
+**It's important to put the paragraph that contains highlight text tag inside** `<p>...</p>`
 **otherwise the following content may not be rendered.**
 
 E.g (hexa color) :  
-``` 
+```
 <p>Sed imperdiet urna et quam ultrices {% hl_text #00FFFF %}your highlighted text{% endhl_text %} dignissim ultrices libero.</p>
 ```
 
@@ -604,7 +604,7 @@ E.g : `{% image fancybox right clear image2.png http://google.fr/images/image125
 - **Width of thumbnail image (optionnal)** : Width to the thumbnail image. If the thumbnail image is empty, width will be attached to thumbnail image created from original image. E.g : `150px` or `85%`.  
 - **Height of thumbnail image (optionnal)** : Height to the thumbnail image. If the thumbnail image is empty, height will be attached to thumbnail image created from original image. E.g : `300px` or `20%`.  
 - **Title (optionnal)** : Title of image displayed in a caption under image. `Alt` HTML attribute will use this title. E.g : `"A beautiful sunrise"`.  
-  
+
 #### Wide image ####
 
 Wide image tag is useful to display wide images in full width. It take the entire window width. Check the the result : [Wide image tag demo](http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/2014/10/29/Tags-plugins-showcase/#Wide-images)
@@ -617,8 +617,8 @@ E.g : `{% wide_image http://google.fr/images/image125.png "A beautiful sunrise" 
 
 #### Fancybox ####
 
-`fancybox` tag is deprecated since Tranquilpeak 1.3. Please use `image` tag with `fancybox` class to generate them. More information here : [Image tag](#image) 
-        
+`fancybox` tag is deprecated since Tranquilpeak 1.3. Please use `image` tag with `fancybox` class to generate them. More information here : [Image tag](#image)
+
 ## Running ##
 
 Run `hexo server` and start writing! :)

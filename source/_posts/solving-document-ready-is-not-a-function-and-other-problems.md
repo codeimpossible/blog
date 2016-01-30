@@ -4,6 +4,11 @@ status: publish
 title: 'Solving "$(document).ready is not a function" and other problems'
 slug: "solving-document-ready-is-not-a-function-and-other-problems"
 date: 2010/01/13 00:00:00
+categories:
+- development
+tags:
+- jquery
+- javascript
 ---
 ### Ever been working on a customer's site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day...
 
