@@ -7,7 +7,11 @@ tags:
 - es6
 ---
 
-Yeap, I'm not a fan of the new [arrow function syntax introduced in es6/2015](http://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this). In case you haven't used it yet, here's a quick and dirty intro:
+When I first read that javascript was getting a arrow function shortcut, I was happy. Like this kind of happy:
+
+<img src="http://www.reactiongifs.com/r/yay2.gif" />
+
+Seriously. So happy. Check out the code below and tell me it doesn't feel great.
 
 ```javascript
 var times_2 = [1,2,3,4].map((num) => num * 2);
@@ -17,9 +21,9 @@ times_2.forEach((num) => {
 });
 ```
 
-At first, this looks like a great shortcut. Hell, I was super excited when I first saw the arrow function proposal. It reminded me of the lambda syntax from my other favorite language, C#. Buuuut it's not like the lambda syntax from C#. Not really.
+Pretty, great, right? The arrow function shortcut seemed like a perfect port of the lambda syntax from C#. Buuuut it's not. Like, not at all.
 
-The ES6 arrow function creates a "lexical scope" when it is used. Lexical (or "static") scoped functions are functions where the `this` context is set to it's parent, and cannot be altered. This means that the examples above would translate (roughly) to this JavaScript:
+When you use the ES6 arrow function, it creates a lexical scope. Lexical (also called static) scoped functions are functions where the `this` context is set to it's parent, and cannot be altered. This means that the examples above would translate (roughly) to this JavaScript:
 
 ```javascript
 var times_2 = [1,2,3,4].map(function(num) {
@@ -33,9 +37,15 @@ times_2.forEach(function(num) {
 
 Now in these two examples the scoping isn't an issue. In fact in a lot of cases you won't care about the `=>` operator creating a static scope. But it's really easy to forget, especially when everyone on the internet just refers to this thing as the "ES6 arrow function".
 
-To me, the better name for this is the "static scope operator". Glossing over the fact that this operator creates a static scope seems like a bad idea to me, since it obscures what the behavior is. Scope is an incredibly tricky thing to understand in JavaScript, so to me it should be very obvious when we are about to muck around with it.
+For real? "Arrow function" makes it sound like this isn't doing anything other than dropping a function into my code. It's a bad name and it should feel bad.
 
-This obfuscation of the static scope operators intent often leads to code that can be misinterpreted or hard(er) to understand. What if we wanted to create an action handler for a React component?
+<img src="http://i.imgur.com/fLlgFSC.gif" />
+
+To me, the better name for this is the "static scope operator". Yeah it's longer, fite me. _Authors Note: don't really fight me, I'm overly squishy and bruise easily. Let's grab a drink of your preference and talk about movies or comics instead_. 
+
+Using a name that doesn't call out that this operator creates a static scope seems like a bad idea to me. Scope is an incredibly tricky thing to understand in JavaScript, so to me it should be very obvious when we are about to muck around with it.
+
+This obfuscation of the static scope operators intent often leads to code that is harder to understand. For example, what if we wanted to create an action handler for a React component?
 
 ```javascript
 class MyComponent extends React.Component {
@@ -49,7 +59,9 @@ class MyComponent extends React.Component {
 }
 ```
 
-The few lines of code here is a plus, but that `onLinkClick` property is hard to grok at first glance. When we write code, we're writing code for the people that we work with now and in the future who will maintain our code. Changing `render()` to use `.bind` could clean this up, but we could also use lodash to bind multiple functions to the current component instance:
+The low number of lines of code here is a plus, but that `onLinkClick` property is hard to grok at first glance. When we write code, we're writing code for the people that we work with now and in the future who will maintain our code. Code is for coworkers. 
+
+Let's try cleaning this up.
 
 ```javascript
 import _ from 'lodash';
@@ -69,4 +81,8 @@ class MyComponent extends React.Component {
 }
 ```
 
-To me the second example is much clearer about what the code is doing. Some will argue that the use of a third-party lib is just bloat, but then you could also write your own helper method to do this. My point is to think more about the abstractions you use day-to-day and to ask yourself if they are improving the readability and function of your code, or if they are just saving you a few keystrokes.
+To me this second example is much easier to read and is clearer about how the code functions. The scope binding is clear, and explicit.
+
+So when do I use a static scope operator? Usually in simple callbacks, like map/reduce or a one line promise handler. I don't see the value of using `=>` for every function by default, especially not in the class definition like above. But if you disagree, cool. I'd love to hear your points so post a comment, twit me on twitter (@codeimpossible), or chat with me at a conference.
+
+My intention here wasn't to make you feel bad for using static scope operators (yep, I'm going to keep calling it that). I do hope that this post made you think more about the abstractions you use and make you ask yourself if they making your code easier to read, maintain, and test, or if they are just saving you a few keystrokes.
